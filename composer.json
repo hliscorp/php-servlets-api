@@ -1,5 +1,5 @@
 {
-    "name": "lucinda/mvc",
+    "name": "hlis/mvc",
     "type": "library",
     "description": "Ultra high-performance API for handling requests into responses via MVC pattern in PHP applications",
     "keywords": ["mvc","servlets","event listeners","view resolvers", "STDOUT", "event handling"],
@@ -8,10 +8,10 @@
     "require": {
         "php": "^7.1|^8.0",
         "ext-simplexml": "*",
-        "lucinda/abstract_mvc": "^1.0"
+        "hlis/abstract_mvc": "^1.0"
     },
     "require-dev": {
-    	"lucinda/unit-testing": "^1.0"
+    	"hlis/unit-testing": "^1.0"
     },
     "autoload": {
     	"psr-4": {
