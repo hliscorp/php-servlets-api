@@ -1,5 +1,5 @@
 {
-    "name": "lucinda/mvc",
+    "name": "hlis/mvc",
     "type": "library",
     "description": "MVC API for normal STDOUT flow in PHP applications",
     "keywords": ["mvc","servlets","event listeners","view resolvers", "STDOUT"],
