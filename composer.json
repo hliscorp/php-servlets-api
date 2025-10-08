@@ -1,8 +1,13 @@
 {
-    "name": "hlis/mvc",
+    "name": "lucinda/mvc",
     "type": "library",
     "description": "High performance MVC API inspired by Java Servlets & Spring MVC",
-    "keywords": ["mvc","servlets","event listeners","view resolvers"],
+    "keywords": [
+        "mvc",
+        "servlets",
+        "event listeners",
+        "view resolvers"
+    ],
     "homepage": "http://www.lucinda-framework.com/servlets",
     "license": "MIT",
     "authors": [
