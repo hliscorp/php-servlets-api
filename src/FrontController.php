@@ -12,6 +12,7 @@ require("locators/ListenerLocator.php");
 require("locators/ControllerLocator.php");
 require("locators/ViewResolverLocator.php");
 require("listeners/ApplicationListener.php");
+require("listeners/PreResolveListener.php");
 require("listeners/RequestListener.php");
 require("listeners/ResponseListener.php");
 
@@ -71,6 +72,13 @@ class FrontController
         $controllerLocator = new ControllerLocator($application, $request->getValidator()->getPage());
         $className  = $controllerLocator->getClassName();
         if ($className) {
+            $runnable = new $className($application, $request, $response);
+            $runnable->run();
+        }
+
+        // runs PreResolveListener instances found by locator in the order they were set in xml
+        $listeners = $listenerLocator->getClassNames("PreResolveListener");
+        foreach ($listeners as $className) {
             $runnable = new $className($application, $request, $response);
             $runnable->run();
         }
